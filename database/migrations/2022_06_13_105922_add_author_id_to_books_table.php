@@ -17,7 +17,7 @@ class AddAuthorIdToBooksTable extends Migration
         //     $table->foreignId('author_id')->after('title')->nullable()->onDelete('set null')->constrained();
         // });
         Schema::table('books', function (Blueprint $table) {
-            $table->unsignedBigInteger('author_id')->nullable()->after('title')->constrained();
+            $table->unsignedBigInteger('author_id')->nullable()->after('title');
 
             $table->foreign('author_id')->references('id')->on('authors')->onDelete('set null');
         });

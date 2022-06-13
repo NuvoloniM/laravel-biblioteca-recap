@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Book;
 
 use App\Models\Author;
+use App\Models\Genre;
 
 class BookController extends Controller
 {

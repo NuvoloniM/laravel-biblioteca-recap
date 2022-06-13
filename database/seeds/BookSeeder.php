@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Models\Book;
 use App\Models\Author;
+use App\Models\Genre;
 // per poter utilizzare la funzione random 
 use Illuminate\support\Arr;
 
@@ -19,6 +20,7 @@ class BookSeeder extends Seeder
         // importo model autori e creo una variabile con essi 
         // essendo un array multidimensionale lo trasformo con toArray() in un array semplice
         $authors_id= Author::pluck('id')->toArray(); 
+        $genres_id= Genre::pluck('id')->toArray(); 
 
         for($i= 0; $i < 10; $i++){
             $newBook = new Book();
